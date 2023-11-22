@@ -15,9 +15,9 @@ root.geometry("350x200")
 # Get system color for the window background
 color = ctypes.windll.user32.GetSysColor(1)  # 1 for the default color of the window
 
-root.configure(bg='#{:06x}'.format(color))  # Set window background color
+root.configure(bg='#{:08x}'.format(color))  # Set window background color
 
-clock_label = tk.Label(root, font=('Arial', 40), fg='white', bg='#{:06x}'.format(color))
+clock_label = tk.Label(root, font=('Arial', 350), fg='orange', bg='#{:06x}'.format(color))
 clock_label.pack(pady=60)
 
 display_time_and_date()
