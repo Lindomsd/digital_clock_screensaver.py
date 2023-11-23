@@ -1,6 +1,12 @@
 import tkinter as tk
 import time
 import ctypes
+import random
+
+def change_colors():
+    # Generate random RGB values for the background and text colors
+    bg_color = "#{:06x}".format(random.randint(0, 0xFFFFFF))
+    text_color = "#{:06x}".format(random.randint(0, 0xFFFFFF))
 
 def display_time_and_date():
     current_time = time.strftime('%H:%M:%S')
