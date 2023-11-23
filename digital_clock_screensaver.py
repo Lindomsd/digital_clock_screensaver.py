@@ -8,6 +8,11 @@ def change_colors():
     bg_color = "#{:06x}".format(random.randint(0, 0xFFFFFF))
     text_color = "#{:06x}".format(random.randint(0, 0xFFFFFF))
 
+ # Apply the new colors to the window background and clock label
+    root.configure(bg=bg_color)
+    clock_label.config(fg=text_color, bg=bg_color)
+    root.after(3000, change_colors)  # Change colors every 3 seconds
+
 def display_time_and_date():
     current_time = time.strftime('%H:%M:%S')
     current_date = time.strftime('%A, %B %d, %Y')
